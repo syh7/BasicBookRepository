@@ -27,4 +27,8 @@ public class Author implements Serializable {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     private List<Book> books;
 
+    public String getName() {
+        return lastName + ", " + firstName;
+    }
+
 }
